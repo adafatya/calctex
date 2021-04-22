@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'package:calctex/materi.dart';
 import 'package:calctex/qe.dart';
 import 'package:flutter/material.dart';
 import 'catEX.dart';
@@ -17,8 +18,9 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => Home(),
-        '/materi': (context) => PKuadrat(),
+        '/materi': (context) => Materi(),
         '/kalku': (context) => Kalkulator(),
+        '/qe': (context) => PKuadrat()
       },
     );
   }
