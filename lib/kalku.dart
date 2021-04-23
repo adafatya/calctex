@@ -19,8 +19,6 @@ class _KalkulatorState extends State<Kalkulator> {
     var encodedJsonData = json.encode(result.body);
     var jsonData = json.decode(encodedJsonData);
 
-    print(jsonData);
-
     return jsonData;
   }
 
@@ -58,9 +56,9 @@ class _KalkulatorState extends State<Kalkulator> {
   void calc() {
     ans = FutureBuilder(
         future: fetchResult(qController.text),
-        builder: (context, snapshot) {
-          if (snapshot.data == null) return Text("Loading...", style: TextStyle(fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold));
-          else return Text("Hasil = "+snapshot.data, style: TextStyle(fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold));
+        builder: (context, res) {
+          if (res.data == null) return Text("Loading...", style: TextStyle(fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold));
+          else return Text("Hasil = "+res.data, style: TextStyle(fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold));
         });
   }
 
