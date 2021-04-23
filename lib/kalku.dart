@@ -9,7 +9,7 @@ class Kalkulator extends StatefulWidget {
 }
 
 class _KalkulatorState extends State<Kalkulator> {
-  Widget ans = Text("Tekan tombol Hitung");
+  Widget ans = Text("Tekan tombol Hitung", style: TextStyle(fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold));
 
   Future fetchResult(String q) async {
     Map<String, String> query = {
@@ -30,7 +30,7 @@ class _KalkulatorState extends State<Kalkulator> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Kalkulator menggunakan api mathjax"),
+        title: Text("Kalkulator"),
       ),
       body: Column(
         children: [
@@ -45,8 +45,8 @@ class _KalkulatorState extends State<Kalkulator> {
           Padding(padding: EdgeInsets.only(bottom: 25)),
           Container(
             decoration: BoxDecoration(
-              color: Colors.grey,
-              border: Border.all(width: 5, color: Colors.blue)
+              color: Colors.blue,
+              border: Border.all(width: 2, color: Colors.lightBlue)
             ),
             child: ans,
           )
@@ -59,8 +59,8 @@ class _KalkulatorState extends State<Kalkulator> {
     ans = FutureBuilder(
         future: fetchResult(qController.text),
         builder: (context, snapshot) {
-          if (snapshot.data == null) return Text("Loading...");
-          else return Text("Hasil = "+snapshot.data, style: TextStyle(fontSize: 18));
+          if (snapshot.data == null) return Text("Loading...", style: TextStyle(fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold));
+          else return Text("Hasil = "+snapshot.data, style: TextStyle(fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold));
         });
   }
 
