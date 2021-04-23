@@ -6,7 +6,7 @@ import 'package:calctex/intder.dart';
 import 'package:calctex/materi.dart';
 import 'package:calctex/qe.dart';
 import 'package:flutter/material.dart';
-import 'catEX.dart';
+import 'kalku.dart';
 import 'home.dart';
 
 void main() => runApp(MyApp());

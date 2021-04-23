@@ -31,6 +31,7 @@ dependencies:
   catex: ^0.0.1+8
   math_keyboard: ^0.1.1
   math_expressions: ^2.1.0
+  http: ^0.13.1
 
 dev_dependencies:
   flutter_test:
