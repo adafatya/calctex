@@ -83,7 +83,10 @@ class _IntDerState extends State<IntDer> {
                 CaTeX(
                     r"\int a.f(x)^n dx = (a)\frac 1 {(n+1)(f'(x))} f(x)^{n+1} + C"),
                 CaTeX(r"\frac d {dx} sin(x) = cos(x)"),
-                CaTeX(r"\frac d {dx} cos(x) = -sin(x)")
+                CaTeX(r"\frac d {dx} cos(x) = -sin(x)"),
+                CaTeX(r"frac d {dx} e^{nx} = ne^{nx}"),
+                CaTeX(r"\int \frac 1 x = ln(x) + C"),
+                
               ],
             ),
           )
@@ -113,12 +116,12 @@ class _IntDerState extends State<IntDer> {
     x.add(CaTeX("y' = ($n) $dfx ${fx.toString()}^${n - 1}"));
     x.add(CaTeX("y' = ${ndfx.toString()} ${fx.toString()}^${n - 1}"));
     x.add(CaTeX(
-        "\\int y = \\frac 1 \{(${n + 1}) $dfx\} ${fx.toString()}^${n + 1}"));
+        "\\int y = \\frac 1 \{(${n + 1}) $dfx\} ${fx.toString()}^${n + 1} + C"));
     ndfx = p.parse("${n + 1}*($dfx)");
     while (ndfx.simplify().toString() != ndfx.toString())
       ndfx = ndfx.simplify();
     x.add(CaTeX(
-        "\\int y = \\frac 1 \{${ndfx.toString()}\} ${fx.toString()}^${n + 1}"));
+        "\\int y = \\frac 1 \{${ndfx.toString()}\} ${fx.toString()}^${n + 1} + C"));
 
     ans = Column(mainAxisAlignment: MainAxisAlignment.center, children: x);
   }
