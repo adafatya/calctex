@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'package:calctex/intder.dart';
 import 'package:calctex/materi.dart';
 import 'package:calctex/qe.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
         '/': (context) => Home(),
         '/materi': (context) => Materi(),
         '/kalku': (context) => Kalkulator(),
-        '/qe': (context) => PKuadrat()
+        '/qe': (context) => PKuadrat(),
+        '/intder': (context) => IntDer()
       },
     );
   }

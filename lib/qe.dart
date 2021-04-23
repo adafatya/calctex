@@ -44,7 +44,7 @@ class _PKuadratState extends State<PKuadrat> {
                 BoxDecoration(border: Border.all(color: Colors.blue, width: 5)),
             child: Column(
               children: [
-                CaTeX(r'ax^2+bx+c = 0'),
+                CaTeX(r'\text{Cari akar } ax^2+bx+c = 0'),
                 Row(
                   children: [
                     Text("Nilai a = "),
@@ -102,11 +102,13 @@ class _PKuadratState extends State<PKuadrat> {
                     child: Text("Pembuktian rumus abc",
                         style: TextStyle(fontSize: 18))),
                 CaTeX(r"\text{bagi kedua ruas dengan }a"),
-                CaTeX(r"\frac {a} {a} x^2 + \frac b a x +\frac c a = \frac 0 a"),
+                CaTeX(
+                    r"\frac {a} {a} x^2 + \frac b a x +\frac c a = \frac 0 a"),
                 CaTeX(r"\text{kurangi kedua ruas dengan }\frac c a"),
                 CaTeX(r"x^2 + \frac b a x = \frac {-c} a,"),
                 CaTeX(r"\text{jumlahkan kedua ruas dengan }(\frac b {2a})^2"),
-                CaTeX(r"x^2 + \frac b a x + (\frac b {2a})^2 = \frac {-c} a + (\frac b {2a})^2"),
+                CaTeX(
+                    r"x^2 + \frac b a x + (\frac b {2a})^2 = \frac {-c} a + (\frac b {2a})^2"),
                 CaTeX(r"(x + \frac b {2a})^2 = \frac {b^2-4ac} {4a^2}"),
                 CaTeX(r"\text{akar kuadratkan kedua ruas}"),
                 CaTeX(r"x + \frac b {2a} = \pm \frac {\sqrt{b^2-4ac}} {2a}"),
