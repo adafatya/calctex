@@ -28,14 +28,12 @@ class _IntDerState extends State<IntDer> {
               children: [
                 Text(
                     "Turunan atau Derivatif dalam ilmu kalkulus merupakan pengukuran terhadap bagaimana fungsi berubah seiring perubahan nilai masukan. Secara umum, turunan menyatakan bagaimana suatu fungsi berubah akibat perubahan variabel; contohnya, turunan dari posisi sebuah benda bergerak terhadap waktu adalah kecepatan sesaat objek tersebut (wikipedia)."),
-                CaTeX(
-                    r"""\text{Turunan dari f(x) dinotasikan sebagai : f'(x) atau }
-                \frac d {dx} f(x)"""),
+                Text("Turunan dari f(x) dinotasikan sebagai :"),
+                CaTeX(r"f'(x) \text{ atau } \frac d {dx} f(x)"),
                 Text(
                     """Integral tak tentu atau antiturunan atau antiderivatif adalah suatu bentuk operasi pengintegralan suatu fungsi yang menghasilkan suatu fungsi baru. Fungsi ini belum memiliki nilai pasti (berupa variabel) sehingga cara pengintegralan yang menghasilkan fungsi tak tentu ini disebut "integral tak tentu" (wikipedia)."""),
-                CaTeX(
-                    r"""\text{Integral tak tentu dari f(x) dinotasikan sebagai : }
-                \int f(x)"""),
+                Text("Integral tak tentu dari f(x) dinotasikan sebagai : "),
+                CaTeX(r"\int f(x)")
               ],
             ),
           ),
@@ -84,7 +82,7 @@ class _IntDerState extends State<IntDer> {
                     r"\int a.f(x)^n dx = (a)\frac 1 {(n+1)(f'(x))} f(x)^{n+1} + C"),
                 CaTeX(r"\frac d {dx} sin(x) = cos(x)"),
                 CaTeX(r"\frac d {dx} cos(x) = -sin(x)"),
-                CaTeX(r"frac d {dx} e^{nx} = ne^{nx}"),
+                CaTeX(r"\frac d {dx} e^{nx} = ne^{nx}"),
                 CaTeX(r"\int \frac 1 x = ln(x) + C"),
                 
               ],

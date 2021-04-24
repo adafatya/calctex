@@ -147,9 +147,8 @@ class _PKuadratState extends State<PKuadrat> {
     List<Widget> x = [];
 
     x.add(CaTeX("($a)x^2+($b)x+($c)=0"));
-    x.add(CaTeX(r"\text{Cari nilai D dimana } D = b^2-4ac"));
-    x.add(CaTeX("D = ($b)^2-4($a)($c)"));
-    x.add(CaTeX("D = $d"));
+    x.add(CaTeX(r"x = \frac {-b \pm \sqrt{b^2-4ac}} {2a}"));
+    x.add(CaTeX("x = \\frac \{-($b)\\pm\\sqrt\{$b^2-4($a)($c)\}\}\{2*$a\}"));
     x.add(CaTeX("x = \\frac \{-($b)\\pm\\sqrt\{$d\}\}\{2*$a\}"));
 
     List<Widget> x1 = [];
