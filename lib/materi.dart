@@ -5,7 +5,7 @@ class Materi extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Beta Calculator"),
+        title: Text("Math Solver"),
       ),
       body: ListView(
         children: [
@@ -44,7 +44,26 @@ class Materi extends StatelessWidget {
                 Navigator.pushNamed(context, "/intder");
               },
             ),
-          )
+          ),
+          Container(
+            decoration: BoxDecoration(
+              border: Border.all(width: 2, color: Colors.blue),
+              boxShadow: [BoxShadow(color: Colors.blue[400])]
+            ),
+            child: ListTile(
+              title: Text("Barisan Aritmatika",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: "Sans serif",
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20)
+                      ),
+              onTap: (){
+                Navigator.pushNamed(context, "/arithmatic");
+              },
+            ),
+          ),
+          
         ],
       )
     );

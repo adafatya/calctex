@@ -5,7 +5,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Beta Calculator"),
+        title: Text("Math Solver"),
       ),
       body: Center(
         child: Column(

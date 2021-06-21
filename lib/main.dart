@@ -6,6 +6,7 @@ import 'package:calctex/intder.dart';
 import 'package:calctex/materi.dart';
 import 'package:calctex/qe.dart';
 import 'package:flutter/material.dart';
+import 'package:calctex/arithmatic.dart';
 import 'kalku.dart';
 import 'home.dart';
 
@@ -15,14 +16,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Beta Calculator",
+      title: "Math Solver",
       initialRoute: '/',
       routes: {
         '/': (context) => Home(),
         '/materi': (context) => Materi(),
         '/kalku': (context) => Kalkulator(),
         '/qe': (context) => PKuadrat(),
-        '/intder': (context) => IntDer()
+        '/intder': (context) => IntDer(),
+        '/arithmatic': (context) => Arithmatic()
       },
     );
   }
